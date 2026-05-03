@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/event_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="picture of event"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dave"
+        app:layout_anchor="@+id/event_imageview"
+        app:layout_anchorGravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_peekHeight="300dp"
+        app:cardBackgroundColor="#C0EBFF"
+        app:cardCornerRadius="40dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="vertical">
+
+                <!-- Drag handle -->
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/drag_handle"/>
+
+                <!-- Event name -->
+                <TextView
+                    android:id="@+id/event_name_onEventPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    android:fontFamily="@font/bricolagegrotesque_bold"
+                    android:textSize="25sp"/>
+
+                <!-- Top info grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/calender"/>
+
+                        <TextView
+                            android:id="@+id/event_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_light"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/location"/>
+
+                        <TextView
+                            android:id="@+id/event_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_light"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/price"/>
+
+                        <TextView
+                            android:id="@+id/ticket_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_light"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_bookmark_border_24"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_light"
+                            android:text="Save"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Description"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/event_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                    android:textSize="20sp"/>
+
+                <!-- Bottom info grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/star"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_semibold"
+                            android:text="4.01"
+                            android:textAlignment="center"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:text="RSVP"
+                        android:textSize="25sp"/>
+
+                    <LinearLayout
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/profile_circle_svgrepo_com"/>
+
+                        <TextView
+                            android:id="@+id/event_planner_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/bricolagegrotesque_semibold"
+                            android:textAlignment="center"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

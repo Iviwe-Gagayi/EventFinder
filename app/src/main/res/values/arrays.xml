@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_items">
+        <item>Johannesburg</item>
+        <item>Cape Town</item>
+        <item>Durban</item>
+    </string-array>
+</resources>
