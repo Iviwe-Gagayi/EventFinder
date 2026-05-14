@@ -18,7 +18,7 @@
 <!--            android:name=".myEvents_activity"-->
 <!--            android:exported="false" />-->
         <activity
-            android:name=".Account_activity"
+            android:name=".ui.Account_activity"
             android:exported="false" />
 <!--        <activity-->
 <!--            android:name=".profile_activity"-->
@@ -27,7 +27,7 @@
 <!--            android:name=".RS_event_activity"-->
 <!--            android:exported="true" />-->
         <activity
-            android:name=".my_preferences_activity"
+            android:name=".ui.my_preferences_activity"
             android:exported="true" />
 <!--        <activity-->
 <!--            android:name=".event_page_activity"-->
@@ -42,7 +42,7 @@
 <!--            </intent-filter>-->
 <!--        </activity>-->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity2"
+            android:name=".ui.MainActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,10 +1,12 @@
-package com.example.eventfinder;
+package com.example.eventfinder.ui;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+
+import com.example.eventfinder.R;
 
 
 public class my_preferences_activity extends AppCompatActivity {

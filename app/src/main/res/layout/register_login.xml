@@ -8,7 +8,7 @@
     android:background="#43C4FF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
 
 
@@ -160,11 +160,11 @@
                 />
 
             <Button
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="30dp"
-                android:id="@+id/btn_login"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/bricolagegrotesque_semibold"
