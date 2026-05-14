@@ -5,4 +5,14 @@
         <item>Cape Town</item>
         <item>Durban</item>
     </string-array>
+
+    <string-array name="event_categories">
+        <item>Music</item>
+        <item>Sports</item>
+        <item>Tech and Gaming</item>
+        <item>Community</item>
+        <item>Festival</item>
+        <item>Art and Film</item>
+        <item>Workshop</item>
+    </string-array>
 </resources>

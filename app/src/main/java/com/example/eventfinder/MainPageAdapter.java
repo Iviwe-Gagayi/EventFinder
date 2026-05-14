@@ -1,5 +1,6 @@
 package com.example.eventfinder;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +29,16 @@ public class MainPageAdapter extends RecyclerView.Adapter<MainPageAdapter.EventV
     @Override
     public void onBindViewHolder(@NonNull EventViewHolder holder, int position) {
         EventCardItem mainPageItem = EventItems.get(position);
-
         holder.eventName.setText(mainPageItem.getEventName());
+
+        // open event detail page when user taps card
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), post_event_activity.class);
+            // pass event id to event detail page
+            // intent.putExtra("event_id", mainPageItem.getEventId());
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -46,4 +55,9 @@ public class MainPageAdapter extends RecyclerView.Adapter<MainPageAdapter.EventV
         }
 
 
-    }}
+    }
+
+
+
+
+}

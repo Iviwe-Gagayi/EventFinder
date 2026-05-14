@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="40dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_overlay"
+            android:clipToOutline="true">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dave" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:rowCount="2"
+                android:columnCount="2"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/NameInput"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Dave"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+
+                    android:fontFamily="@font/bricolagegrotesque_semibold"/>
+
+                <LinearLayout
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/star"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:textColor="@color/black"
+                        android:text="4.01"
+                        android:textAlignment="center"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/UsernameInput"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="theoneandonlyDave"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"/>
+
+            </GridLayout>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="40dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/glass_card_background">
+
+            
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/bookmark_svgrepo_com_2_"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_width="match_parent"
+                    android:text="Saved and RSPV'ed Events"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    />
+                
+                
+            </GridLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerInsetStart="16dp"
+                app:dividerInsetEnd="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/account_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="23dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/user_1_svgrepo_com"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Account"
+                    android:layout_gravity="end|center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    />
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerInsetStart="16dp"
+                app:dividerInsetEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/star"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="My Events"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    />
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerInsetStart="16dp"
+                app:dividerInsetEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:src="@drawable/edit_2_svgrepo_com"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="My Preferences"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <include layout="@layout/nav_resource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

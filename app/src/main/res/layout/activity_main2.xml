@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@drawable/background_gradient">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginTop="30dp"
+                    android:entries="@array/my_items"
+                    android:fontFamily="@font/bricolagegrotesque_semibold" />
+
+
+                <LinearLayout
+                    android:id="@+id/profile_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/h" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:gravity="center"
+                        android:text="Hello Jane Smith 2020"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/SearchTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Where are we off to?"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusBottomEnd="40dp"
+                    app:boxCornerRadiusBottomStart="40dp"
+                    app:boxCornerRadiusTopEnd="40dp"
+                    app:boxCornerRadiusTopStart="40dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="#5A6B7A"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/searchInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:textColor="@color/black"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/Upcoming_Events_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:gravity="center"
+                    android:text="Upcoming Events"
+
+                    android:textColor="@color/black"
+                    android:textSize="35sp" />
+
+
+            </LinearLayout>
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollchip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:checkedChip="@id/chip_all"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="All" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_music"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Music" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_sports"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Sports" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_community"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Community" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_festival"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Festival" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ArtFilm"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Art and Film" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_workshop"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Workshop" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_techGaming"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:chipBackgroundColor="@color/white"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Tech and Gaming" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+
+
+
+
+        android:id="@+id/recycler_view0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="70dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+
+    <include layout="@layout/nav_resource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
