@@ -45,4 +45,5 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation(libs.play.services.location)
 }

@@ -36,10 +36,19 @@ public class MainPageAdapter extends RecyclerView.Adapter<MainPageAdapter.EventV
         EventCardItem mainPageItem = EventItems.get(position);
         holder.eventName.setText(mainPageItem.getTitle());
 
-        // open event detail page when user taps card
-
+        // Open event detail page when user taps card
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), EventDetails.class);
+
+            //send all the data to the details page
+            intent.putExtra("event_id", mainPageItem.getEventId());
+            intent.putExtra("title", mainPageItem.getTitle());
+            intent.putExtra("description", mainPageItem.getDescription());
+            intent.putExtra("event_date", mainPageItem.getEventDate());
+            intent.putExtra("latitude", mainPageItem.getLatitude());
+            intent.putExtra("longitude", mainPageItem.getLongitude());
+            intent.putExtra("creator_id", mainPageItem.getCreatorId());
+
             v.getContext().startActivity(intent);
         });
     }
