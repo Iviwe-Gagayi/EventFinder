@@ -45,4 +45,6 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("androidx.activity:activity:1.7.0")
+    implementation("com.github.bumptech.glide:glide:5.0.5")
 }

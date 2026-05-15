@@ -14,33 +14,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EventFinder"
         android:usesCleartextTraffic="true">
-<!--        <activity-->
-<!--            android:name=".myEvents_activity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".myEvents_activity"
+            android:exported="false" />
         <activity
             android:name=".Account_activity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".profile_activity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".RS_event_activity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".profile_activity"
+            android:exported="false" />
+        <activity
+            android:name=".RS_event_activity"
+            android:exported="true" />
         <activity
             android:name=".my_preferences_activity"
             android:exported="true" />
-<!--        <activity-->
-<!--            android:name=".event_page_activity"-->
-<!--            android:exported="true" />-->
-<!--        <activity-->
-<!--            android:name=".post_event_activity"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".event_page_activity"
+            android:exported="true" />
+        <activity
+            android:name=".post_event_activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
