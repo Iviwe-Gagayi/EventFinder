@@ -118,7 +118,6 @@
             android:id="@+id/scrollchip"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
             android:layout_marginHorizontal="0dp"
             android:layout_marginTop="5dp"
             android:scrollbars="none">
@@ -133,12 +132,52 @@
                     android:id="@+id/chip_all"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
-                    app:chipBackgroundColor="@color/white"
-                    app:chipStrokeColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="All" />
+                    android:text="All"
+                    app:chipBackgroundColor="@color/white"
+                    app:chipStrokeColor="@color/black" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nightlife"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Nightlife"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_tech"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Tech"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_outdoors"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Outdoors"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_campus_life"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Campus Life"
+                    app:chipBackgroundColor="@color/white" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_music"
@@ -146,29 +185,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Music" />
+                    android:text="Music"
+                    app:chipBackgroundColor="@color/white" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_sports"
+                    android:id="@+id/chip_sport"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Sports" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_community"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
-                    android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Community" />
+                    android:text="Sport"
+                    app:chipBackgroundColor="@color/white" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_festival"
@@ -176,19 +205,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Festival" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_ArtFilm"
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
-                    android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Art and Film" />
+                    android:text="Festival"
+                    app:chipBackgroundColor="@color/white" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_workshop"
@@ -196,26 +215,83 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Workshop" />
-
+                    android:text="Workshop"
+                    app:chipBackgroundColor="@color/white" />
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_techGaming"
+                    android:id="@+id/chip_health"
                     style="@style/Widget.MaterialComponents.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    app:chipBackgroundColor="@color/white"
                     android:fontFamily="@font/bricolagegrotesque_semibold"
-                    android:text="Tech and Gaming" />
+                    android:text="Health &amp; Wellness"
+                    app:chipBackgroundColor="@color/white" />
 
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_art"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Art &amp; Film"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_academic"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Academic &amp; Study"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_fitness"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Fitness &amp; Training"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_gaming"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Gaming"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_food"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Food &amp; Dining"
+                    app:chipBackgroundColor="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_networking"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:text="Networking &amp; Career"
+                    app:chipBackgroundColor="@color/white" />
 
             </com.google.android.material.chip.ChipGroup>
 
         </HorizontalScrollView>
-
 
 
     </com.google.android.material.appbar.AppBarLayout>

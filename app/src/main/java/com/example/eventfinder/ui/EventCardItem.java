@@ -1,5 +1,7 @@
 package com.example.eventfinder.ui;
 
+import java.util.ArrayList;
+
 public class EventCardItem {
     private int eventId;
     private String title;
@@ -9,8 +11,10 @@ public class EventCardItem {
     private double longitude;
     private int creatorId;
 
+    private ArrayList<Integer> categoryIds;
 
-    public EventCardItem(int eventId, String title, String description, String eventDate, double latitude, double longitude, int creatorId) {
+
+    public EventCardItem(int eventId, String title, String description, String eventDate, double latitude, double longitude, int creatorId, ArrayList<Integer> categoryIds) {
         this.eventId = eventId;
         this.title = title;
         this.description = description;
@@ -18,6 +22,8 @@ public class EventCardItem {
         this.latitude = latitude;
         this.longitude = longitude;
         this.creatorId = creatorId;
+        this.categoryIds = categoryIds;
+
     }
 
 
@@ -28,4 +34,10 @@ public class EventCardItem {
     public double getLatitude() { return latitude; }
     public double getLongitude() { return longitude; }
     public int getCreatorId() { return creatorId; }
+    public ArrayList<Integer> getCategoryIds() {
+        return categoryIds;
+    }
+    public void setCategoryIds(ArrayList<Integer> categoryIds) {
+        this.categoryIds = categoryIds;
+    }
 }

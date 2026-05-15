@@ -40,8 +40,6 @@ public class MainPageAdapter extends RecyclerView.Adapter<MainPageAdapter.EventV
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), EventDetails.class);
-            // pass event id to event detail page
-            // intent.putExtra("event_id", mainPageItem.getEventId());
             v.getContext().startActivity(intent);
         });
     }

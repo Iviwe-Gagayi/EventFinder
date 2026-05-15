@@ -70,7 +70,25 @@ public class MainFeed extends AppCompatActivity {
 
 
         fetchUserName();
-        fetchEvents();
+        fetchEvents(0); //fetch everything is the default
+
+        //category chips harcoding
+        findViewById(R.id.chip_all).setOnClickListener(v -> fetchEvents(0));
+        findViewById(R.id.chip_nightlife).setOnClickListener(v -> fetchEvents(1));
+        findViewById(R.id.chip_tech).setOnClickListener(v -> fetchEvents(2));
+        findViewById(R.id.chip_outdoors).setOnClickListener(v -> fetchEvents(3));
+        findViewById(R.id.chip_campus_life).setOnClickListener(v -> fetchEvents(4));
+        findViewById(R.id.chip_music).setOnClickListener(v -> fetchEvents(5));
+        findViewById(R.id.chip_sport).setOnClickListener(v -> fetchEvents(6));
+        findViewById(R.id.chip_festival).setOnClickListener(v -> fetchEvents(7));
+        findViewById(R.id.chip_workshop).setOnClickListener(v -> fetchEvents(8));
+        findViewById(R.id.chip_health).setOnClickListener(v -> fetchEvents(9));
+        findViewById(R.id.chip_art).setOnClickListener(v -> fetchEvents(10));
+        findViewById(R.id.chip_academic).setOnClickListener(v -> fetchEvents(11));
+        findViewById(R.id.chip_fitness).setOnClickListener(v -> fetchEvents(12));
+        findViewById(R.id.chip_gaming).setOnClickListener(v -> fetchEvents(13));
+        findViewById(R.id.chip_food).setOnClickListener(v -> fetchEvents(14));
+        findViewById(R.id.chip_networking).setOnClickListener(v -> fetchEvents(15));
     }
 
     private void fetchUserName() {
@@ -103,11 +121,16 @@ public class MainFeed extends AppCompatActivity {
         });
     }
 
-    private void fetchEvents() {
+    private void fetchEvents(int categoryId) {
         //plaiceHolder coods for now
         //TODO: Get location working
         String endpoint = "get_events.php?user_id=" + currentUserId +
                 "&lat=-26.1892&lng=28.0306&radius=50";
+
+
+        if (categoryId != 0) {
+            endpoint += "&category_id=" + categoryId;
+        }
 
         ApiClient.getInstance().getRequest(endpoint, new Callback() {
             @Override
@@ -141,7 +164,17 @@ public class MainFeed extends AppCompatActivity {
                                     int creatorId = eventObj.getInt("creator_id");
 
 
-                                    EventCardItem item = new EventCardItem(eventId, eventTitle, eventDesc, eventDate, lat, lng, creatorId);
+                                    ArrayList<Integer> categoryIds = new ArrayList<>();
+
+
+                                    if (eventObj.has("category_ids")) {
+                                        org.json.JSONArray categoryArray = eventObj.getJSONArray("category_ids");
+                                        for (int j = 0; j < categoryArray.length(); j++) {
+                                            categoryIds.add(categoryArray.getInt(j));
+                                        }
+                                    }
+
+                                    EventCardItem item = new EventCardItem(eventId, eventTitle, eventDesc, eventDate, lat, lng, creatorId, categoryIds);
                                     eventList.add(item);
                                 }
 
