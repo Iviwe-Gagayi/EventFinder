@@ -16,9 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.eventfinder.R;
 import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
-
-public class MainActivity2 extends AppCompatActivity {
+public class MainFeed extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

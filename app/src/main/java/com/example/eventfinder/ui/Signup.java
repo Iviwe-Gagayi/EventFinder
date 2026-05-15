@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.eventfinder.R;
 import com.example.eventfinder.network.ApiClient;
+import com.example.eventfinder.utils.SessionManager;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONObject;
@@ -33,7 +34,7 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.register_login);
+        setContentView(R.layout.signup);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -141,10 +142,11 @@ public class Signup extends AppCompatActivity {
 
                                     Toast.makeText(Signup.this, "Success!", Toast.LENGTH_SHORT).show();
 
-                                    // TODO: Save the user_id somewhere global
+                                    //saving "user_id" globally
+                                    SessionManager.saveUserId(Signup.this, userId);
+
                                     //After the user has successfully logged in go to the main page
-                                    Intent intent = new Intent(Signup.this, MainActivity2.class);
-                                    intent.putExtra("user_id", userId);
+                                    Intent intent = new Intent(Signup.this, MainFeed.class);
                                     startActivity(intent);
                                     finish(); //finish is a built in function which just destroys this screen so the user can't come back
 

@@ -51,7 +51,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity2"
+            android:name=".ui.MainFeed"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
