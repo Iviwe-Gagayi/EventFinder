@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_gradient"
+    tools:context=".post_event_activity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="40dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post an event"
+                    android:textColor="#1a1a2e"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/bricolagegrotesque_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#22122111"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event name"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/eventNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/form_field_outline"
+                    android:hint="What is the name of the event?"
+                    android:textColorHint="#5A6B7A"
+                    android:textColor="#1a1a2e"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/form_field_outline"
+                    android:layout_marginBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/locationInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Where will the event be held?"
+                        android:textColorHint="#5A6B7A"
+                        android:textColor="#1a1a2e"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="50dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bricolagegrotesque_light"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:contentDescription="Search"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/form_field_outline"
+                    android:layout_marginBottom="20dp">
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:entries="@array/event_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="50dp"/>
+
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter the date of the event"
+                    android:textColor="#1a1a2e"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/dateDay"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_box_background"
+                        android:hint="DD"
+                        android:gravity="center"
+                        android:textColor="#1a1a2e"
+                        android:textColorHint="#1a1a2e"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:layout_marginEnd="10dp"/>
+
+                    <EditText
+                        android:id="@+id/dateMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_box_background"
+                        android:hint="MM"
+                        android:gravity="center"
+                        android:textColor="#1a1a2e"
+                        android:textColorHint="#1a1a2e"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:layout_marginEnd="10dp"/>
+
+                    <EditText
+                        android:id="@+id/dateYear"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_box_background"
+                        android:hint="YYYY"
+                        android:gravity="center"
+                        android:textColor="#1a1a2e"
+                        android:textColorHint="#1a1a2e"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ticket Price"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/ticketPriceInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/form_field_outline"
+                    android:hint="How much a ticket?"
+                    android:textColorHint="#5A6B7A"
+                    android:textColor="#1a1a2e"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    android:inputType="numberDecimal"
+                    android:layout_marginBottom="20dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/descriptionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/textarea_outline"
+                    android:hint="Tell people what to expect"
+                    android:textColorHint="#5A6B7A"
+                    android:textColor="#1a1a2e"
+                    android:gravity="top|start"
+                    android:padding="16dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bricolagegrotesque_light"
+                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="24dp"/>
+
+
+                <!-- Event image picker -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event poster"
+                    android:textColor="#1a1a2e"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/bricolagegrotesque_semibold"
+                    android:layout_marginBottom="8dp"/>
+
+                <FrameLayout
+                    android:id="@+id/eventImagePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/form_field_outline"
+                    android:layout_marginBottom="20dp"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:id="@+id/eventImagePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/eventImagePlaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tap to add a poster"
+                            android:textColor="#5A6B7A"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bricolagegrotesque_semibold"
+                            android:layout_marginTop="6dp"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:textColor="#1a1a2e"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:layout_marginEnd="10dp"/>
+
+                    <Button
+                        android:id="@+id/btn_post"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_weight="1"
+                        android:text="Post"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/black"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"/>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/nav_resource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

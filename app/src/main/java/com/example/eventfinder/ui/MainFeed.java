@@ -49,6 +49,11 @@ public class MainFeed extends AppCompatActivity {
     private double currentLng = 28.0306; //default WITS cooords
     private int selectedCategoryId = 0;
 
+    private com.google.android.material.textfield.TextInputEditText searchInput;
+    private com.google.android.material.slider.Slider radiusSlider;
+    private TextView radiusText;
+    private int currentRadius = 50;
+
     private final ActivityResultLauncher<String[]> locationPermissionRequest =
             registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(), result -> {
                 Boolean fineLocationGranted = result.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false);
@@ -99,6 +104,40 @@ public class MainFeed extends AppCompatActivity {
 
         fetchUserName();
         requestLocationPermissions();
+
+        searchInput = findViewById(R.id.searchInput);
+        radiusSlider = findViewById(R.id.radius_slider);
+        radiusText = findViewById(R.id.radius_text);
+
+        //Checking if user clicks enter for the search bar
+        searchInput.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH) {
+                fetchEvents(selectedCategoryId);
+
+                // Hiding the keyboard after searc
+                android.view.inputmethod.InputMethodManager imm = (android.view.inputmethod.InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                return true;
+            }
+            return false;
+        });
+
+
+        radiusSlider.addOnChangeListener((slider, value, fromUser) -> {
+            currentRadius = (int) value;
+            radiusText.setText("Search Radius: " + currentRadius + " km");
+        });
+
+        //Getting the events after they let of the slider
+        radiusSlider.addOnSliderTouchListener(new com.google.android.material.slider.Slider.OnSliderTouchListener() {
+            @Override
+            public void onStartTrackingTouch(@NonNull com.google.android.material.slider.Slider slider) {}
+
+            @Override
+            public void onStopTrackingTouch(@NonNull com.google.android.material.slider.Slider slider) {
+                fetchEvents(selectedCategoryId);
+            }
+        });
 
         //category chips harcoding
         findViewById(R.id.chip_all).setOnClickListener(v -> { selectedCategoryId = 0; fetchEvents(0); });
@@ -185,9 +224,16 @@ public class MainFeed extends AppCompatActivity {
     }
 
     private void fetchEvents(int categoryId) {
-        String endpoint = "get_events.php?user_id=" + currentUserId +
-                "&lat=" + currentLat + "&lng=" + currentLng + "&radius=500";
+        String query = searchInput.getText() != null ? searchInput.getText().toString().trim() : "";
+        String encodedQuery = android.net.Uri.encode(query);
 
+        String endpoint = "get_events.php?user_id=" + currentUserId +
+                "&lat=" + currentLat + "&lng=" + currentLng +
+                "&radius=" + currentRadius +
+                "&search=" + encodedQuery;
+
+
+        android.util.Log.d("API_TEST", "My final URL is: " + endpoint);
 
         if (categoryId != 0) {
             endpoint += "&category_id=" + categoryId;

@@ -109,6 +109,7 @@
 
             
             <GridLayout
+                android:id="@+id/rs_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
@@ -174,6 +175,7 @@
                 app:dividerInsetEnd="16dp"/>
 
             <LinearLayout
+                android:id="@+id/my_events_btn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:orientation="horizontal"
@@ -187,13 +189,12 @@
                     android:layout_marginEnd="12dp"/>
 
                 <TextView
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:text="My Events"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
                     android:fontFamily="@font/bricolagegrotesque_light"
-                    />
+                    android:text="My Events"
+                    android:textSize="18sp" />
 
 
             </LinearLayout>
@@ -206,6 +207,7 @@
                 app:dividerInsetEnd="16dp"/>
 
             <LinearLayout
+                android:id="@+id/my_preferences_btn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:orientation="horizontal"

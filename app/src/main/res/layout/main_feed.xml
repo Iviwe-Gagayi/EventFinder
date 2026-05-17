@@ -91,7 +91,34 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/radius_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bricolagegrotesque_semibold"
+                        android:text="Search Radius: 50 km"
+                        android:textColor="#5A6B7A"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/radius_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stepSize="5.0"
+                        android:value="50.0"
+                        android:valueFrom="5.0"
+                        android:valueTo="100.0"
+                        app:thumbColor="#003C99"
+                        app:trackColorActive="#0055A9"
+                        app:trackColorInactive="#D3D3D3" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/Upcoming_Events_text"
